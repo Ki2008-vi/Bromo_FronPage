@@ -202,7 +202,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-social">
-            <p>Explore the Beauty, Conquer the Peak <br /> Experience the Harmony of Nature in the Mountain Climbing Area</p>
+            <p>Explore the Beauty, Conquer the Peak <br /> Experience the Harmony of Nature in <br></br> The Mountain Climbing Area</p>
             <a href="mailto:info@foundryandform.com">infobromo.com</a>
             <a href="#hikes">View Enquiries</a>
           </div>

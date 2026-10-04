@@ -6,29 +6,33 @@ import './OurHikes.css'
 gsap.registerPlugin(ScrollTrigger)
 
 const BROMO_IMAGES = [
-  '/bromo1.jpg',
-  '/bromo2.jpg',
-  '/bromo3.jpg',
-  '/bromo4.jpg',
-  '/bromo5.jpg',
-  '/bromopeople.jpg',
-  '/bromo7.jpg',
-  '/bromo8.jpg',
-  '/bromo9.jpg',
-  '/bromo10.jpg',
+  '/optimized/bromo1.jpg',
+  '/optimized/bromo2.jpg',
+  '/optimized/bromo3.jpg',
+  '/optimized/bromo4.jpg',
+  '/optimized/bromo5.jpg',
+  '/optimized/bromopeople.jpg',
+  '/optimized/bromo7.jpg',
+  '/optimized/bromo8.jpg',
+  '/optimized/bromo9.jpg',
+  '/optimized/bromo10.jpg',
+  '/optimized/bromo6.jpg',
 ]
 
 export default function OurHikes() {
   const showreelSecRef = useRef(null)
   const containerRef = useRef(null)
   const [currentFrame, setCurrentFrame] = useState(0)
-  const frameInterval = 800 // ms per frame
+  const frameInterval = 1000 // ms per frame
 
-  // Preload images for buttery smooth cycling
+  // Preload and decode images for buttery smooth cycling
   useEffect(() => {
     BROMO_IMAGES.forEach((src) => {
       const img = new Image()
       img.src = src
+      if (img.decode) {
+        img.decode().catch(() => {})
+      }
     })
   }, [])
 
@@ -44,6 +48,8 @@ export default function OurHikes() {
         setCurrentFrame(i)
       }, i * (frameInterval / 1000))
     }
+    // Ensure the last frame stays visible for the full frameInterval before looping
+    frameTimeline.set({}, {}, BROMO_IMAGES.length * (frameInterval / 1000))
 
     // Only run frame cycling when section is visible
     const observer = new IntersectionObserver(
@@ -103,12 +109,15 @@ export default function OurHikes() {
   return (
     <section className="showreel" id="hikes" ref={showreelSecRef}>
       <div className="showreel-container" ref={containerRef}>
-        <img
-          src={BROMO_IMAGES[currentFrame]}
-          alt={`Mount Bromo Showreel frame ${currentFrame + 1}`}
-          loading="lazy"
-          decoding="async"
-        />
+        {BROMO_IMAGES.map((src, index) => (
+          <img
+            key={src}
+            src={src}
+            alt={`Mount Bromo Showreel frame ${index + 1}`}
+            className={`showreel-frame ${index === currentFrame ? 'active' : ''}`}
+            decoding="async"
+          />
+        ))}
       </div>
     </section>
   )

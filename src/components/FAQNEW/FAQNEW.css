@@ -18,12 +18,12 @@
 .faq h1 {
   text-transform: uppercase;
   font-family: "Space Grotesk", "PP Neue Montreal", sans-serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 800;
   letter-spacing: -0.01em;
   line-height: 0.85;
   width: 75%;
-  max-width: 1100px;
+  max-width: 1200px;
   color: #000000;
   margin: 0;
 }
@@ -34,7 +34,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .faq-item {
@@ -48,7 +48,7 @@
   text-align: left;
   font-family: "Host Grotesk", "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.95rem, 1.25vw, 1.125rem);
+  font-size: clamp(0.95rem, 1.20vw, 1.0rem);
   line-height: 1.35;
   margin: 0;
 }
