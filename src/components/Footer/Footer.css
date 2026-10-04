@@ -1,0 +1,231 @@
+/* ====================================================
+   FOOTER - 800PX BROMO BACKGROUND & WHITE SATURATION
+==================================================== */
+.footer-section {
+  position: relative;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.contact-anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* Background image with dreamy cloud-white desaturation and airy brightness */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/bromo9.jpg');
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+  z-index: 1;
+}
+
+/* Smooth fade connecting FAQ section seamlessly */
+.footer-top-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.85) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Content Container */
+.footer-content {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* Top Brand Bar */
+.footer-top-brand {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-tagline {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.75;
+}
+
+/* Centerpiece Title & Simple Nav */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-title {
+  font-family: "Space Grotesk", "Barlow Condensed", sans-serif;
+  font-size: clamp(4.5rem, 11vw, 9.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: #7e7e7e;
+  margin: 0;
+  text-shadow: 0 4px 24px rgba(255, 255, 255, 0.6);
+}
+
+.footer-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
+  font-weight: 500;
+  color: #7e7e7e;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+/* Simple Navigation Bar (from Navbar.jsx) */
+.footer-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+  padding: 14px 44px;
+  border-radius: 9999px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer-nav:hover {
+  background: rgba(94, 94, 94, 0.1);
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.footer-nav .nav-items {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.footer-nav .nav-items a {
+  color: #f6f6f6;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  position: relative;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer-nav .nav-items a:hover {
+  opacity: 0.6;
+  transform: translateY(-1px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.88rem;
+  color: #7e7e7e;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.back-to-top {
+  color: #7e7e7e;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.25s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-section {
+    height: 720px;
+  }
+
+  .footer-content {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .footer-nav .nav-items {
+    gap: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-section {
+    height: 680px;
+  }
+
+  .footer-top-brand {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .footer-nav {
+    padding: 12px 28px;
+  }
+
+  .footer-nav .nav-items {
+    gap: 1.6rem;
+  }
+
+  .footer-nav .nav-items a {
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

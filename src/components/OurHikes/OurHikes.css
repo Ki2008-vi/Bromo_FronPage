@@ -1,0 +1,123 @@
+/* ====================================================
+   OUR HIKES - SHOWREEL EXPEDITION SECTION
+==================================================== */
+.showreel {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.showreel .showreel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.75);
+  border-radius: 2rem;
+  overflow: hidden;
+  will-change: transform, border-radius;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.showreel .showreel-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.showreel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: 2;
+}
+
+.showreel-badge {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.badge-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+  animation: badgePulseAnim 1.6s infinite ease-in-out;
+}
+
+@keyframes badgePulseAnim {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+}
+
+.showreel-timecode {
+  font-family: "Space Grotesk", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(12px);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 999px) {
+  .showreel .showreel-container {
+    transform: scale(1);
+    border-radius: 0;
+  }
+
+  .showreel-overlay {
+    padding: 1.5rem;
+  }
+
+  .showreel-badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .showreel-timecode {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
