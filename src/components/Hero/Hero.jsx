@@ -187,11 +187,11 @@ export default function Hero() {
       </div>
 
       <section className="hero">
-        <div className="intro-img"><img src="/bromo5.jpg" alt="Mount Bromo Caldera" /></div>
-        <div className="intro-img"><img src="/bromo2.jpg" alt="Mount Bromo Panoramic View" /></div>
-        <div className="intro-img hero-img"><img src="/bromo1.jpg" alt="Mount Bromo Sunrise" fetchPriority="high" /></div>
-        <div className="intro-img"><img src="/bromo3.jpg" alt="Mount Bromo Peak" /></div>
-        <div className="intro-img"><img src="/bromo4.jpg" alt="Mount Bromo Mist" /></div>
+        <div className="intro-img"><img src="/optimized/bromo5.jpg" alt="Mount Bromo Caldera" /></div>
+        <div className="intro-img"><img src="/optimized/bromo2.jpg" alt="Mount Bromo Panoramic View" /></div>
+        <div className="intro-img hero-img"><img src="/optimized/bromo1.jpg" alt="Mount Bromo Sunrise" fetchPriority="high" /></div>
+        <div className="intro-img"><img src="/optimized/bromo3.jpg" alt="Mount Bromo Peak" /></div>
+        <div className="intro-img"><img src="/optimized/bromo4.jpg" alt="Mount Bromo Mist" /></div>
 
         <div className="hero-content">
           <div className="hero-header">

@@ -24,15 +24,6 @@ export default function Footer() {
         <div className="footer-center">
           <h2 className="footer-title">BROMO</h2>
           <p className="footer-subtitle">Tengger Semeru National Park</p>
-
-          {/* Simple Navigation Bar matching Navbar */}
-          <div className="footer-nav">
-            <div className="nav-items">
-              <a href="#hikes">Expedition</a>
-              <a href="#about">About</a>
-              <a href="#experience">Contact</a>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Minimal Row */}
